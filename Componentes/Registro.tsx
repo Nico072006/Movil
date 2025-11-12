@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput,TouchableOpacity,ImageBackground } from "react-native";
 import estiloRegistro from "../Estilos/Registro.tsx";
 import { Picker } from "@react-native-picker/picker";
 
@@ -11,6 +11,12 @@ export default function Registro() {
   const [email, setEmail] = useState("");
 
   return (
+    <ImageBackground
+            source={{uri:'https://i.pinimg.com/originals/ea/0c/e5/ea0ce5c3654f59baf688c98e6e6d023f.png'}}
+            resizeMode="stretch"
+            style={estiloRegistro.fondo}
+    >
+
     <View style={estiloRegistro.container}>
       <Text style={estiloRegistro.label}>Name</Text>
       <TextInput
@@ -53,10 +59,16 @@ export default function Registro() {
         style={estiloRegistro.picker}
         onValueChange={(itemValue) => setRol(itemValue)}
       >
-        <Picker.Item label="Select a role" value="" />
         <Picker.Item label="Usuario" value="Usuario" />
         <Picker.Item label="Admin" value="Admin" />
       </Picker>
+
+
+      <TouchableOpacity style={estiloRegistro.boton} onPress={() => console.log("Registrado")}>
+        <Text style={estiloRegistro.textoBoton}>Register</Text>
+      </TouchableOpacity>
+
     </View>
+    </ImageBackground>
   );
 }

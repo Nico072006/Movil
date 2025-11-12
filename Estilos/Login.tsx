@@ -4,11 +4,12 @@ const  styles=StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#f8f2ff",
+    backgroundColor: "#ffffffff",
   },
   label: {
-    fontSize: 18,
+    fontSize: 16,
     marginBottom: 5,
+    fontWeight: "bold",
   },
   input: {
     borderWidth: 1,
@@ -16,7 +17,7 @@ const  styles=StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     marginBottom: 15,
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffffff",
   },
   picker: {
     height: 50,
