@@ -7,6 +7,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {NavigationContainer} from "@react-navigation/native"
 
+import 'react-native-gesture-handler';
+
 export type RootStackParamList={
     Inicio:undefined,
     Tablero:undefined,
@@ -18,7 +20,7 @@ export default function App(){
     return(
         <NavigationContainer>
             <Stack.Navigator
-            initialRouteName="Inicio"
+            initialRouteName="Registro"
             >
                 <Stack.Screen
                 name="Tablero"
