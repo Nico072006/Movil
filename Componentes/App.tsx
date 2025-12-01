@@ -21,6 +21,9 @@ export default function App(){
         <NavigationContainer>
             <Stack.Navigator
             initialRouteName="Registro"
+            screenOptions={
+                {headerShown:false}
+            }
             >
                 <Stack.Screen
                 name="Tablero"
