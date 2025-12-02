@@ -1,3 +1,46 @@
+/*buildscript {
+    ext {
+        buildToolsVersion = "36.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 36
+        targetSdkVersion = 36
+        ndkVersion = "27.1.12297006"
+        kotlinVersion = "2.1.20"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"
+
+
+subprojects{
+    afterEvaluate{ project ->
+        if(project.hasProperty('android')){
+            project.android{
+                compileSdkVersion 36
+                buildToolsVersion "36.0.0"
+            }
+        }
+        project.configurations.all{
+            resolutionStrategy{
+                force 'androidx.core:core:1.13.1'
+                force 'androidx.core:core-ktx:1.13.1'
+                exclude group: 'com.android.support',module:'support-compat'
+                exclude group: 'com.android.support',module:'support-v4'
+                exclude group: 'com.android.support',module:'support-annotations'
+            }
+        }
+    }
+}*/
+
 buildscript {
     ext {
         buildToolsVersion = "36.0.0"
